@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lights</title>
+    <style>
+
+    * { margin: 0; padding: 0; }
+
+    body {
+        background: #111;
+        color: #888;
+        font-family: Arial, 'Helvetica Neue', sans-serif;
+        font-size: 11px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+    }
+
+    .wrap {
+        width: 800px;
+        margin: auto;
+        text-align: center;
+        position: relative;
+    }
+
+    .canvas-container {
+        margin-top: 10px;
+        display: inline-block;
+        border: solid 1px #333;
+        width: 800px;
+        height: 450px;
+        position: relative;
+    }
+
+    .controls {
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+        height: 25px;
+        background: url('assets/images/arrow-keys.png') no-repeat center center;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 5px 10px;
+        font-family: Arial, 'Helvetica Neue', sans-serif;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+    }
+
+    .num-lights-input {
+        width: 50px;
+        padding: 3px;
+    }
+
+    </style>
+    <script src="assets/scripts/lib/require.min.js" data-main="assets/scripts/main"></script>
+    <script src="assets/scripts/require.config.js"></script>
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="canvas-container">
+            <canvas id="game-canvas" width="800" height="450"></canvas>
+            <div class="controls"></div>
+        </div>
+
+        <div class="settings">
+            <form class="settings-form">
+                <label>Number of Stars</label>
+                <input type="number" name="num-lights" class="num-lights-input" id="num-lights-input" value="5" />
+                <input type="submit" value="generate" class="btn" />
+            </form>
+        </div>
+
+
+    </div>
+
+</body>
+</html>
